@@ -23,3 +23,17 @@ vim.api.nvim_set_keymap('n', '<leader>hh', '<cmd>lua require("harpoon.ui").toggl
 vim.api.nvim_set_keymap('n', '<leader>hn', '<cmd>lua require("harpoon.term").gotoTerminal(1)<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ho', '<cmd>lua require("harpoon.term").gotoTerminal(2)<CR>', { noremap = true, silent = true })
 
+--Bufferline set
+-- Navigate through buffers using <leader>1, <leader>2, etc.
+vim.api.nvim_set_keymap('n', '<leader>1', ':BufferGoto 1<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>2', ':BufferGoto 2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>3', ':BufferGoto 3<CR>', { noremap = true, silent = true })
+-- Add more mappings for additional buffers as needed
+
+-- Close buffer with <leader>c
+vim.api.nvim_set_keymap('n', '<leader>c', ':BufferClose<CR>', { noremap = true, silent = true })
+
+-- Move to previous/next buffer
+vim.api.nvim_set_keymap('n', '<leader>h', ':BufferPrevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>l', ':BufferNext<CR>', { noremap = true, silent = true })
+
